@@ -22,7 +22,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
+app.use(cors());
+
+const index = require('./routes/api/index');
+app.use('/', index);
+
+const myDishesRoutes = require('./routes/api/dishes');
+app.use('/api/dishes', myDishesRoutes);
+
+const myIngredientRoutes = require('./routes/api/ingredients');
+app.use('/api/ingredients', myIngredientRoutes);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

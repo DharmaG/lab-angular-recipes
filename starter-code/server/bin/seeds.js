@@ -88,7 +88,29 @@ const foods = [
   }
 ]
 
-Dish.create(dishes, (err) => {
+Dish.create(foods, (err) => {
   if (err) { throw(err) }
-  console.log(`Created ${dishes.length} dishes`)
+  console.log(`Created ${foods.length} foods`)
+});
+
+
+const ingredients = [
+  { name: "tomato",
+    image:" https://media.giphy.com/media/5QzGlzXchtHXy/giphy.gif"},
+  { name: "mushroom",
+    image: "https://media.giphy.com/media/hICiFp6y2rDyw/giphy.gif"},
+  { name: "onion",
+    image: "https://media.giphy.com/media/3oEhn9cGkYAxLg7ASQ/giphy.gif"},
+  { name: "lettuce",
+    image: "https://media.giphy.com/media/l1J3qfEz3nmxWL4Vq/giphy.gif"},
+  { name: "olive",
+    image: "https://media.giphy.com/media/12368mEnmGKz9m/giphy.gif"},
+  { name: "peppers",
+    image: "https://media.giphy.com/media/uEnG2acgcfNAY/giphy.gif"}
+
+]
+
+Ingredient.create(ingredients, (err) => {
+  if (err) { throw(err) }
+  console.log(`Created ${ingredients.length} ingredients`)
 });

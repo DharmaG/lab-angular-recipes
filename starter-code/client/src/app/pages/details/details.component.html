@@ -1,0 +1,15 @@
+
+<h2> {{ dishInfo.name }} </h2>
+
+<p> {{ dishInfo.description }} </p>
+
+<img [src]="dishInfo.image" />
+
+<div class="oneIng">
+  <ul *ngFor="let oneIng of ingredients">
+    <li>
+      <h3> {{ oneIng.name }} </h3>
+    </li>
+  </ul>
+
+</div>

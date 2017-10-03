@@ -1,0 +1,12 @@
+img {
+  width: 50%;
+  display: inline;
+}
+
+li {
+  list-style: none;
+}
+
+.oneIng {
+  display: inline-block;
+}
